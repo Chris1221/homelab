@@ -1,0 +1,59 @@
+services:
+  db_recipes:
+    restart: always
+    image: postgres:16-alpine
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data
+    env_file:
+      - ../conf/tandoor.env
+    networks:
+      - belvale
+
+  web_recipes:
+    restart: always
+    image: vabene1111/recipes
+    env_file:
+      - ../conf/tandoor.env
+    volumes:
+      - staticfiles:/opt/recipes/staticfiles
+      # Do not make this a bind mount, see https://docs.tandoor.dev/install/docker/#volumes-vs-bind-mounts
+      - nginx_config:/opt/recipes/nginx/conf.d
+      - ./mediafiles:/opt/recipes/mediafiles
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.recipes.rule=PathPrefix(`/recipes`)"
+      - "traefik.http.routers.recipes.entrypoints=web"
+      - "traefik.http.services.recipes.loadbalancer.server.port=8080"
+      # - "traefik.http.middlewares.strip-recipes.stripprefix.prefixes=/recipes"
+      # - "traefik.http.routers.recipes.middlewares=strip-recipes"
+    depends_on:
+      - db_recipes
+    networks:
+      - belvale
+
+  # nginx_recipes:
+  #   image: nginx:mainline-alpine
+  #   restart: always
+  #   env_file:
+  #     - ../conf/tandoor.env
+  #   depends_on:
+  #     - web_recipes
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.routers.recipes.rule=PathPrefix(`/recipes`)"
+  #     - "traefik.http.routers.recipes.entrypoints=web"
+  #     - "traefik.http.services.recipes.loadbalancer.server.port=80"
+  #     # - "traefik.http.middlewares.strip-recipes.stripprefix.prefixes=/recipes"
+  #     # - "traefik.http.routers.recipes.middlewares=strip-recipes"
+  #   volumes:
+  #     # Do not make this a bind mount, see https://docs.tandoor.dev/install/docker/#volumes-vs-bind-mounts
+  #     - nginx_config:/etc/nginx/conf.d
+  #     # - ../conf/tandoor.nginx.conf:/etc/nginx/conf.d/default.conf
+  #     - staticfiles:/recipes/static
+  #     - ./mediafiles:/recipes/media
+  #   networks:
+  #     - belvale
+
+volumes:
+  nginx_config:
+  staticfiles:

@@ -1,0 +1,23 @@
+# Note: The samba share is not on the traefik network,
+# because it's not HTTP based. 
+services:
+  samba:
+    image: dperson/samba
+    container_name: ${SAMBA_CONTAINER_NAME}
+    restart: unless-stopped
+    environment:
+      - TZ=${SAMBA_TIMEZONE}
+    command: >
+      -s "${SAMBA_SHARE_NAME};/shared;yes;no;yes;all"
+      -u "${SAMBA_USER};${SAMBA_PASS}"
+    volumes:
+      - ${SAMBA_SHARE_PATH}:/shared
+    ports:
+      - "137:137/udp"
+      - "138:138/udp"
+      - "139:139/tcp"
+      - "445:445/tcp"
+    networks:
+      - belvale
+    labels:
+      - "traefik.enable=false"

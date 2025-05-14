@@ -1,0 +1,28 @@
+services:
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:v2.8.0 # 
+    container_name: mealie
+    restart: always
+    volumes:
+      - ./mealie-data:/app/data/
+    environment:
+      # Set Backend ENV Variables Here
+      ALLOW_SIGNUP: "true"
+      PUID: 1000
+      PGID: 1000
+      TZ: America/Toronto
+      BASE_URL: https://belvale/mealie
+      VITE_BASE_PATH: "/mealie"
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mealie.rule=PathPrefix(`/mealie`)"
+      - "traefik.http.routers.mealie.entrypoints=web"
+      - "traefik.http.services.mealie.loadbalancer.server.port=9000"
+      - "traefik.http.middlewares.strip-mealie.stripprefix.prefixes=/mealie"
+      - "traefik.http.routers.mealie.middlewares=strip-mealie"
+    networks:
+      - belvale
+
+volumes:
+  mealie-data:

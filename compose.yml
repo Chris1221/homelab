@@ -1,0 +1,36 @@
+# ----------------------------------------
+# Here we define the services we want to run
+# in addition to the base, administrative
+# services defined in the base compose file.
+# ----------------------------------------
+include:
+  - services/dashy.yml
+  - services/portainer.yml
+  # - services/tandoor.yml
+  - services/samba.yml
+  - services/mealie.yml
+  # - services/immich.yml
+
+services:
+  traefik:
+    image: "traefik:v3.3"
+    container_name: "traefik"
+    command:
+      #- "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entryPoints.web.address=:80"
+      - "--accesslog.filepath=/logs/access.log"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./traefik-logs:/logs"
+    networks:
+      - belvale
+
+networks:
+  belvale:
+    external: true

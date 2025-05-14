@@ -1,0 +1,35 @@
+pageInfo:
+  title: Belvale
+sections: # An array of sections
+- name: Data and Storage
+  icon: far fa-rocket
+  items:
+  - title: Immich
+    description: Image management and backup
+    icon: fas fa-image
+    url: http://belvale:2283
+  - title: CouchDB
+    description: Obsidian database
+    icon: fas fa-database
+    url: http://belvale:5984/_utils
+- name: Social
+  icon: fas fa-users
+  items:
+  - title: Monica
+    description: Personal CRM
+    icon: far fa-address-book
+    url: http://belvale:8080
+  - title: Tandoor
+    description: Recipe management
+    icon: fas fa-utensils
+    url: http://belvale/recipes
+- name: Admin
+  items:
+  - title: Portainer
+    description: Docker container management
+    icon: fab fa-docker
+    url: http://belvale/portainer
+  - title: Traefik
+    description: Reverse proxy
+    icon: fas fa-plug
+    url: http://belvale:8080
