@@ -9,7 +9,7 @@ include:
   # - services/tandoor.yml
   - services/samba.yml
   - services/mealie.yml
-  # - services/immich.yml
+  - services/immich.yml
 
 services:
   traefik:

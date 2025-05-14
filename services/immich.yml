@@ -25,6 +25,15 @@ services:
     restart: always
     healthcheck:
       disable: false
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.immich.rule=PathPrefix(`/immich`)"
+    #   - "traefik.http.routers.immich.entrypoints=web"
+    #   - "traefik.http.services.immich.loadbalancer.server.port=2283"
+    #   # - "traefik.http.middlewares.strip-immich.stripprefix.prefixes=/immich"
+    #   # - "traefik.http.routers.immich.middlewares=strip-immich"
+    # networks:
+    #   - belvale
 
   immich-machine-learning:
     container_name: immich_machine_learning
@@ -47,6 +56,8 @@ services:
     restart: always
     healthcheck:
       disable: false
+    # networks:
+    #   - belvale
 
   redis:
     container_name: immich_redis
@@ -54,6 +65,8 @@ services:
     healthcheck:
       test: redis-cli ping || exit 1
     restart: always
+    # networks:
+    #   - belvale
 
   database:
     container_name: immich_postgres
@@ -85,6 +98,8 @@ services:
       -c shared_buffers=512MB
       -c wal_compression=on
     restart: always
+    # networks:
+    #   - belvale
 
 volumes:
   model-cache:

@@ -1,5 +1,41 @@
 # Chris's Homelab
 
+This is a set of services that are deployed within my tailnet. The basic architecture is as follows:
+
+```mermaid
+graph TD
+    subgraph Reverse Proxy
+        Traefik
+    end
+
+    subgraph Services
+        Dashy
+        Portainer
+        Mealie
+        Immich
+        Samba
+        Tandoor
+    end
+
+    Traefik --> Dashy
+    Traefik --> Portainer
+    Traefik --> Mealie
+    Traefik --> Immich
+    Traefik --> Samba
+    Traefik --> Tandoor
+
+    subgraph Secret Management
+        OnePassword["1Password CLI"]
+        RestoreEnv["restore_env.sh"]
+        UpdateOp["update_op.sh"]
+    end
+
+    OnePassword --> RestoreEnv
+    RestoreEnv --> Services
+    Services --> UpdateOp
+    UpdateOp --> OnePassword
+```
+
 ### Secret management
 
 Secrets are managed by 1Password, specifically through the CLI. This relies on having the OP CLI available and authenticated. To do so, follow the [guide here](https://developer.1password.com/docs/cli/get-started) or briefly:
