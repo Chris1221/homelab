@@ -34,6 +34,12 @@ graph TD
     RestoreEnv --> Services
     Services --> UpdateOp
     UpdateOp --> OnePassword
+
+    subgraph Infrastructure Management
+        Terraform["Terraform (infra/)"]
+    end
+
+    Terraform --> Services
 ```
 
 ### Infrastructure Management
