@@ -2,6 +2,9 @@ ITEM_TITLE=homelab_env
 VAULT_NAME=homelab
 OUTPUT_FILE="${1:-.env}"  # default to .env if not specified
 
+eval $(op signin)
+
+
 if [[ -z "$VAULT_NAME" ]]; then
   echo "Usage: $0 <vault_name> [item_title] [output_file]"
   exit 1

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+eval $(op signin)
+
 # Sync the .env file to 1Password
 FIELDS=$(grep -v '^\s*#' .env | grep -v '^\s*$' | \
   while IFS='=' read -r key val; do
