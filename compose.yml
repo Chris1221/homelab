@@ -10,6 +10,7 @@ include:
   - services/samba.yml
   - services/mealie.yml
   - services/immich.yml
+  - services/backrest.yml
 
 services:
   traefik:

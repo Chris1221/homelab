@@ -37,9 +37,11 @@ graph TD
 
     subgraph Infrastructure Management
         Terraform["Terraform (infra/)"]
+        Restic["Restic (automated weekly backups)"]
     end
 
     Terraform --> Services
+    Restic --> Services
 ```
 
 ### Infrastructure Management
