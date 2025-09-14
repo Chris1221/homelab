@@ -8,9 +8,12 @@ include:
   - services/portainer.yml
   # - services/tandoor.yml
   - services/samba.yml
-  - services/mealie.yml
-  - services/immich.yml
+  - services/mealie.yml #- services/immich.yml
   - services/backrest.yml
+  - services/actual.yml
+  - services/paperless.yml
+  # - services/n8n.yml
+  - services/expenseowl.yml
 
 services:
   traefik:
@@ -22,13 +25,19 @@ services:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entryPoints.web.address=:80"
+      - "--entryPoints.websecure.address=:443"
       - "--accesslog.filepath=/logs/access.log"
+      - "--certificatesresolvers.letsencrypt.acme.tlschallenge=true"
+      - "--certificatesresolvers.letsencrypt.acme.email=chris.c.1221@gmail.com"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
     ports:
       - "80:80"
+      - "443:443"
       - "8080:8080"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "./traefik-logs:/logs"
+      - "./letsencrypt:/letsencrypt"
     networks:
       - belvale
 

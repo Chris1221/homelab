@@ -10,11 +10,9 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.portainer.rule=PathPrefix(`/portainer`)"
+      - "traefik.http.routers.portainer.rule=Host(`portainer.lab.chrisbcole.me`)"
       - "traefik.http.routers.portainer.entrypoints=web"
       - "traefik.http.services.portainer.loadbalancer.server.port=9000"
-      - "traefik.http.middlewares.strip-portainer.stripprefix.prefixes=/portainer"
-      - "traefik.http.routers.portainer.middlewares=strip-portainer"
     networks:
       - belvale
 

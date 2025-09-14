@@ -1,5 +1,5 @@
 pageInfo:
-  title: Belvale
+  title: lab.chrisbcole.me
 sections: # An array of sections
 - name: Data and Storage
   icon: far fa-rocket
@@ -7,29 +7,43 @@ sections: # An array of sections
   - title: Immich
     description: Image management and backup
     icon: fas fa-image
-    url: http://belvale:2283
+    url: http://lab.chrisbcole.me:2283
   - title: CouchDB
     description: Obsidian database
     icon: fas fa-database
-    url: http://belvale:5984/_utils
-- name: Social
-  icon: fas fa-users
+    url: http://lab.chrisbcole.me:5984/_utils
+  - title: Backrest
+    description: Backup management
+    icon: fas fa-hdd
+    url: http://lab.chrisbcole.me:9898
+
+- name: Home 
+  icon: fas fa-home
   items:
-  - title: Monica
-    description: Personal CRM
-    icon: far fa-address-book
-    url: http://belvale:8080
-  - title: Tandoor
+  - title: Mealie
     description: Recipe management
-    icon: fas fa-utensils
-    url: http://belvale/recipes
+    icon: fas fa-book-open
+    url: http://mealie.lab.chrisbcole.me
+  - title: Actual
+    description: Personal finance management
+    icon: fas fa-money-bill-wave
+    url: https://actual.lab.chrisbcole.me
+  - title: Expense Owl
+    description: Expense tracking
+    icon: fas fa-receipt
+    url: http://expenseowl.lab.chrisbcole.me
+  - title: Paperless
+    description: Document management
+    icon: fas fa-file-alt
+    url: http://paperless.lab.chrisbcole.me
+
 - name: Admin
   items:
   - title: Portainer
     description: Docker container management
     icon: fab fa-docker
-    url: http://belvale/portainer
+    url: http://portainer.lab.chrisbcole.me
   - title: Traefik
     description: Reverse proxy
     icon: fas fa-plug
-    url: http://belvale:8080
+    url: http://lab.chrisbcole.me:8080
