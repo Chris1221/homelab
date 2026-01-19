@@ -17,7 +17,7 @@ sections: # An array of sections
     icon: fas fa-hdd
     url: http://lab.chrisbcole.me:9898
 
-- name: Home 
+- name: Home
   icon: fas fa-home
   items:
   - title: Mealie

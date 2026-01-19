@@ -6,7 +6,7 @@ then
     curl https://get.acme.sh | sh
     source ~/.bashrc
 
-    acme.sh --register-account -m chris.c.1221@gmail.com
+    acme.sh --register-account -m $USER_EMAIL
 fi
 
 # Load environment variables from .env file
@@ -19,7 +19,7 @@ set +a; source .env; set -a
 # Issue a wildcard certificate for the domain and
 # copy it to the traefik certs directory.
 CERTS_DIR="./certs/"
-/home/chris/.acme.sh/acme.sh --issue --dns dns_cf -d "*.lab.chrisbcole.me" -d "lab.chrisbcole.me" --log --debug --staging
-cp ~/.acme.sh/\*.lab.chrisbcole.me_ecc/* $CERTS_DIR/
+$HOME_DIR/.acme.sh/acme.sh --issue --dns dns_cf -d "*.${DOMAIN}" -d "${DOMAIN}" --log --debug --staging
+cp ~/.acme.sh/\*.${DOMAIN}_ecc/* $CERTS_DIR/
 
 echo "Certificate issued and copied to $CERTS_DIR, they are valid for 90 days."

@@ -31,7 +31,7 @@ accessLog:
 # certificatesResolvers:
 #   cloudflare:
 #     acme:
-#       email: "chris.c.1221@gmail.com"
+#       email: "${USER_EMAIL}"
 #       storage: /letsencrypt/acme.json
 #       dnsChallenge:
 #         provider: cloudflare

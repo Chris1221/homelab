@@ -15,14 +15,14 @@ services:
       PUID: 1000
       PGID: 1000
       TZ: America/Toronto
-      BASE_URL: https://mealie.lab.chrisbcole.me
-      DEFAULT_EMAIL: "chris.c.1221@gmail.com"
+      BASE_URL: https://mealie.${DOMAIN}
+      DEFAULT_EMAIL: ${USER_EMAIL}
       DEFAULT_GROUP: "belvale"
       DEFAULT_HOUSEHOLD: "belvale"
 
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.mealie.rule=Host(`mealie.lab.chrisbcole.me`)"
+      - "traefik.http.routers.mealie.rule=Host(`mealie.${DOMAIN}`)"
       - "traefik.http.routers.mealie.entrypoints=websecure"
       - "traefik.http.routers.mealie.tls=true"
       - "traefik.http.services.mealie.loadbalancer.server.port=9000"
