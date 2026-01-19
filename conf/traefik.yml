@@ -1,0 +1,37 @@
+log:
+  level: INFO
+  # level: DEBUG
+
+api:
+  insecure: true
+
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
+
+  websecure:
+    address: ":443"
+
+providers:
+  docker:
+    exposedByDefault: false
+
+  file:
+    filename: /etc/traefik/certs.yml
+
+accessLog:
+  filePath: /logs/access.log
+
+# Uncomment to use Cloudflare DNS challenge for Let's Encrypt
+# certificatesResolvers:
+#   cloudflare:
+#     acme:
+#       email: "chris.c.1221@gmail.com"
+#       storage: /letsencrypt/acme.json
+#       dnsChallenge:
+#         provider: cloudflare

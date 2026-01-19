@@ -9,3 +9,6 @@ infra/terraform.tfvars.json
 letsencrypt/
 services/
 !services/*.yml
+certs/
+!certs/certs.yml
+certs_old/

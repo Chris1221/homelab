@@ -3,8 +3,6 @@ services:
     image: ghcr.io/mealie-recipes/mealie:v2.8.0 # 
     container_name: mealie
     restart: always
-    ports:
-        - "9925:9000" # 
     deploy:
       resources:
         limits:
@@ -17,7 +15,7 @@ services:
       PUID: 1000
       PGID: 1000
       TZ: America/Toronto
-      BASE_URL: http://mealie.lab.chrisbcole.me
+      BASE_URL: https://mealie.lab.chrisbcole.me
       DEFAULT_EMAIL: "chris.c.1221@gmail.com"
       DEFAULT_GROUP: "belvale"
       DEFAULT_HOUSEHOLD: "belvale"
@@ -25,7 +23,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.mealie.rule=Host(`mealie.lab.chrisbcole.me`)"
-      - "traefik.http.routers.mealie.entrypoints=web"
+      - "traefik.http.routers.mealie.entrypoints=websecure"
+      - "traefik.http.routers.mealie.tls=true"
       - "traefik.http.services.mealie.loadbalancer.server.port=9000"
     networks:
       - belvale
