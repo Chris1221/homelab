@@ -12,3 +12,11 @@ services/
 certs/
 !certs/certs.yml
 certs_old/
+
+# Monitoring data (stored on /media/med_2tb/monitoring/)
+# Note: Actual data is stored outside repo, but listing here for clarity
+# monitoring/prometheus/
+# monitoring/grafana/
+# monitoring/loki/
+# monitoring/uptime-kuma/
+# monitoring/scrutiny/

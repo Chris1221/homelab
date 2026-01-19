@@ -1,0 +1,450 @@
+[2026-01-19T13:14:16.423Z] info: kubernetes.yaml was copied to the config folder
+[2026-01-19T13:17:05.958Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.110Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.116Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.121Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.127Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.133Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.136Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.143Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.147Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.153Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.157Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:17:06.173Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.075Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.215Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.222Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.229Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.234Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.240Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.246Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.254Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.259Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.264Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.268Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:00.288Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:57.405Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:57.440Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.288Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.432Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.439Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.446Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.455Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.461Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.469Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.476Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.480Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.484Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.488Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.503Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:58.545Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.463Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.599Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.605Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.608Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.614Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.620Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.624Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.627Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.633Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.636Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.639Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.657Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:18:59.661Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.224Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.317Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.320Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.323Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.328Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.331Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.334Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.337Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.345Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.348Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.351Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.358Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:00.363Z] error: Host validation failed for: home.lab.chrisbcole.me. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2026-01-19T13:19:42.280Z] info: proxmox.yaml was copied to the config folder
+[2026-01-19T13:19:42.296Z] info: custom.css was copied to the config folder
+[2026-01-19T13:19:42.297Z] info: custom.js was copied to the config folder
+[2026-01-19T13:19:42.545Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:19:42.910Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:19:43.124Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:19:47.963Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/version...
+[2026-01-19T13:19:47.983Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:19:47.984Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/version
+[2026-01-19T13:19:47.990Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/stats...
+[2026-01-19T13:19:47.994Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:19:47.994Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/stats
+[2026-01-19T13:19:48.005Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-01-19T13:19:52.968Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/version...
+[2026-01-19T13:19:52.971Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:19:52.972Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/version
+[2026-01-19T13:19:52.981Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/stats...
+[2026-01-19T13:19:52.983Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:19:52.984Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/stats
+[2026-01-19T13:19:52.993Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-01-19T13:20:04.458Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:20:04.535Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-01-19T13:20:09.529Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/version...
+[2026-01-19T13:20:09.532Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:20:09.532Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/version
+[2026-01-19T13:20:09.536Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/stats...
+[2026-01-19T13:20:09.538Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:20:09.539Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/stats
+[2026-01-19T13:20:11.273Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:20:11.286Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-01-19T13:20:22.606Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:20:27.651Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/stats...
+[2026-01-19T13:20:27.653Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:20:27.653Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/stats
+[2026-01-19T13:20:27.655Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/version...
+[2026-01-19T13:20:27.657Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:20:27.658Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/version
+[2026-01-19T13:20:27.665Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-01-19T13:20:28.801Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:20:36.456Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:20:36.503Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-01-19T13:20:41.496Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/version...
+[2026-01-19T13:20:41.498Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:20:41.498Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/version
+[2026-01-19T13:20:41.503Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/stats...
+[2026-01-19T13:20:41.504Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:20:41.504Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/stats
+[2026-01-19T13:20:54.610Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:20:59.702Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/stats...
+[2026-01-19T13:20:59.704Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:20:59.704Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/stats
+[2026-01-19T13:20:59.707Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/version...
+[2026-01-19T13:20:59.708Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:20:59.709Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/version
+[2026-01-19T13:20:59.721Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-01-19T13:22:09.780Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:22:10.054Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-01-19T13:22:10.061Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:22:10.544Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:22:15.078Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/version...
+[2026-01-19T13:22:15.091Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:22:15.091Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/version
+[2026-01-19T13:22:15.095Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/stats...
+[2026-01-19T13:22:15.099Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:22:15.100Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/stats
+[2026-01-19T13:22:20.087Z] error: <httpProxy> Error calling http://immich-server:2283/...
+[2026-01-19T13:22:20.093Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:22:20.097Z] error: <httpProxy> Error calling http://backrest:9898/...
+[2026-01-19T13:22:20.099Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN backrest] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'backrest'
+  }
+]
+[2026-01-19T13:22:25.091Z] error: <httpProxy> Error calling http://paperless:8000/...
+[2026-01-19T13:22:25.094Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN paperless] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'paperless'
+  }
+]
+[2026-01-19T13:22:25.098Z] error: <httpProxy> Error calling http://obsidian-couchdb:5984/...
+[2026-01-19T13:22:25.100Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN obsidian-couchdb] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'obsidian-couchdb'
+  }
+]
+[2026-01-19T13:22:25.134Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-01-19T13:22:30.101Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/version...
+[2026-01-19T13:22:30.102Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:22:30.103Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/version
+[2026-01-19T13:22:30.108Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/stats...
+[2026-01-19T13:22:30.110Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:22:30.111Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/stats
+[2026-01-19T13:22:35.111Z] error: <httpProxy> Error calling http://immich-server:2283/...
+[2026-01-19T13:22:35.113Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:22:35.115Z] error: <httpProxy> Error calling http://backrest:9898/...
+[2026-01-19T13:22:35.116Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN backrest] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'backrest'
+  }
+]
+[2026-01-19T13:22:40.116Z] error: <httpProxy> Error calling http://obsidian-couchdb:5984/...
+[2026-01-19T13:22:40.117Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN obsidian-couchdb] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'obsidian-couchdb'
+  }
+]
+[2026-01-19T13:22:40.119Z] error: <httpProxy> Error calling http://paperless:8000/...
+[2026-01-19T13:22:40.120Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN paperless] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'paperless'
+  }
+]
+[2026-01-19T13:23:59.377Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-01-19T13:24:04.372Z] error: <httpProxy> Error calling http://immich-server:2283/...
+[2026-01-19T13:24:04.374Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:24:04.413Z] error: <httpProxy> Error calling http://obsidian-couchdb:5984/...
+[2026-01-19T13:24:04.415Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN obsidian-couchdb] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'obsidian-couchdb'
+  }
+]
+[2026-01-19T13:24:09.376Z] error: <httpProxy> Error calling http://backrest:9898/...
+[2026-01-19T13:24:09.378Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN backrest] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'backrest'
+  }
+]
+[2026-01-19T13:24:09.421Z] error: <httpProxy> Error calling http://paperless:8000/...
+[2026-01-19T13:24:09.423Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN paperless] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'paperless'
+  }
+]
+[2026-01-19T13:24:14.385Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/stats...
+[2026-01-19T13:24:14.386Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:24:14.386Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/stats
+[2026-01-19T13:24:14.390Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-01-19T13:24:14.424Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/version...
+[2026-01-19T13:24:14.426Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:24:14.426Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/version
+[2026-01-19T13:24:19.394Z] error: <httpProxy> Error calling http://immich-server:2283/...
+[2026-01-19T13:24:19.395Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-01-19T13:24:19.430Z] error: <httpProxy> Error calling http://obsidian-couchdb:5984/...
+[2026-01-19T13:24:19.432Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN obsidian-couchdb] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'obsidian-couchdb'
+  }
+]
+[2026-01-19T13:24:24.398Z] error: <httpProxy> Error calling http://backrest:9898/...
+[2026-01-19T13:24:24.400Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN backrest] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'backrest'
+  }
+]
+[2026-01-19T13:24:24.438Z] error: <httpProxy> Error calling http://paperless:8000/...
+[2026-01-19T13:24:24.439Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN paperless] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'paperless'
+  }
+]

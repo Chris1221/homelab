@@ -1,0 +1,19 @@
+---
+- Documentation:
+    - Homepage Docs:
+        - icon: homepage.png
+          href: https://gethomepage.dev/
+    - Docker Docs:
+        - icon: docker.png
+          href: https://docs.docker.com/
+    - Traefik Docs:
+        - icon: traefik.png
+          href: https://doc.traefik.io/traefik/
+
+- Infrastructure:
+    - GitHub:
+        - icon: github.png
+          href: https://github.com/Chris1221/homelab
+    - Google Cloud:
+        - icon: google-cloud.png
+          href: https://console.cloud.google.com/

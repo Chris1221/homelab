@@ -1,0 +1,36 @@
+---
+- logo:
+    icon: https://github.com/walkxcode/dashboard-icons/raw/main/png/homelab.png
+
+- greeting:
+    text_size: xl
+    text: Welcome to Belvale
+
+- datetime:
+    text_size: xl
+    format:
+      timeStyle: short
+      dateStyle: full
+      hourCycle: h23
+
+- search:
+    provider: google
+    target: _blank
+    focus: true
+
+- resources:
+    backend: resources
+    expanded: true
+    cpu: true
+    memory: true
+    disk: /
+    uptime: true
+    units: metric
+    refresh: 3000
+
+- openmeteo:
+    label: Toronto
+    latitude: 43.65
+    longitude: -79.38
+    units: metric
+    cache: 5

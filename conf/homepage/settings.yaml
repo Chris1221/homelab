@@ -1,0 +1,54 @@
+---
+title: Belvale Homelab
+favicon: https://github.com/walkxcode/dashboard-icons/blob/main/png/homepage.png
+
+# Theme options: dark, light
+theme: dark
+
+# Color options: slate, gray, zinc, neutral, stone, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose, red, orange
+color: emerald
+
+# Background image (optional)
+background:
+  image: https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920
+  blur: sm
+  saturate: 50
+  brightness: 50
+  opacity: 20
+
+# Header style: clean, boxed, underlined
+headerStyle: clean
+
+# Layout style: fixed (default) or fluid
+layout:
+  Data and Storage:
+    style: row
+    columns: 3
+    icon: mdi-database
+  Home:
+    style: row
+    columns: 3
+    icon: mdi-home
+  Admin:
+    style: row
+    columns: 3
+    icon: mdi-cog
+  Monitoring:
+    style: row
+    columns: 3
+    icon: mdi-chart-line
+
+# Hide errors
+hideErrors: false
+
+# Show stats
+showStats: true
+
+# Card layout
+statusStyle: dot
+
+# Quick launch
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: false
+  hideVisitURL: false
