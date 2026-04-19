@@ -64,7 +64,7 @@
 
     - Dashy:
         icon: dashy.png
-        href: https://lab.chrisbcole.me
+        href: https://dashy.lab.chrisbcole.me
         description: Legacy dashboard interface
         siteMonitor: http://Dashy:8080
 
