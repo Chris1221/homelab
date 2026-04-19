@@ -14,6 +14,11 @@ include:
   - services/paperless.yml
   # - services/n8n.yml
   # - services/expenseowl.yml
+  # Monitoring and observability stack
+  - services/monitoring.yml
+  - services/uptime-kuma.yml
+  - services/homepage.yml
+  - services/scrutiny.yml
 
 services:
   traefik:
