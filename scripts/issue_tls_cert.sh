@@ -19,7 +19,7 @@ set +a; source .env; set -a
 # Issue a wildcard certificate for the domain and
 # copy it to the traefik certs directory.
 CERTS_DIR="./certs/"
-$HOME_DIR/.acme.sh/acme.sh --issue --dns dns_cf -d "*.${DOMAIN}" -d "${DOMAIN}" --log --debug --staging
+$HOME/.acme.sh/acme.sh --issue --dns dns_cf -d "*.${DOMAIN}" -d "${DOMAIN}" --log --debug
 cp ~/.acme.sh/\*.${DOMAIN}_ecc/* $CERTS_DIR/
 
 echo "Certificate issued and copied to $CERTS_DIR, they are valid for 90 days."

@@ -164711,3 +164711,259 @@
     hostname: 'obsidian-couchdb'
   }
 ]
+[2026-05-01T12:00:20.592Z] error: <httpProxy> Error calling http://backrest:9898/...
+[2026-05-01T12:00:20.607Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN backrest] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'backrest'
+  }
+]
+[2026-05-01T12:00:20.622Z] error: <httpProxy> Error calling http://paperless:8000/...
+[2026-05-01T12:00:20.628Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN paperless] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'paperless'
+  }
+]
+[2026-05-01T12:00:25.593Z] error: <httpProxy> Error calling http://obsidian-couchdb:5984/...
+[2026-05-01T12:00:25.595Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN obsidian-couchdb] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'obsidian-couchdb'
+  }
+]
+[2026-05-01T12:00:25.626Z] error: <httpProxy> Error calling http://backrest:9898/...
+[2026-05-01T12:00:25.627Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN backrest] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'backrest'
+  }
+]
+[2026-05-01T12:00:30.599Z] error: <httpProxy> Error calling http://paperless:8000/...
+[2026-05-01T12:00:30.601Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN paperless] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'paperless'
+  }
+]
+[2026-05-01T12:00:30.631Z] error: <httpProxy> Error calling http://obsidian-couchdb:5984/...
+[2026-05-01T12:00:30.631Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN obsidian-couchdb] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'obsidian-couchdb'
+  }
+]
+[2026-05-01T12:00:35.506Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-05-01T12:00:35.783Z] error: <httpProxy> Error calling http://immich-server:2283/...
+[2026-05-01T12:00:35.784Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-05-01T12:00:35.787Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-05-01T12:00:36.129Z] error: <service-helpers> Error getting services from Docker server 'my-docker': TypeError [ERR_INVALID_URL]: Invalid URL
+[2026-05-01T12:00:40.298Z] error: <httpProxy> Error calling http://obsidian-couchdb:5984/...
+[2026-05-01T12:00:40.300Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN obsidian-couchdb] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'obsidian-couchdb'
+  }
+]
+[2026-05-01T12:00:40.610Z] error: <httpProxy> Error calling http://backrest:9898/...
+[2026-05-01T12:00:40.612Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN backrest] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'backrest'
+  }
+]
+[2026-05-01T12:00:45.303Z] error: <httpProxy> Error calling http://paperless:8000/...
+[2026-05-01T12:00:45.305Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN paperless] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'paperless'
+  }
+]
+[2026-05-01T12:00:45.619Z] error: <httpProxy> Error calling http://immich-server:2283/...
+[2026-05-01T12:00:45.621Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-05-01T12:00:50.307Z] error: <httpProxy> Error calling http://immich-server:2283/...
+[2026-05-01T12:00:50.308Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-05-01T12:00:50.636Z] error: <httpProxy> Error calling http://obsidian-couchdb:5984/...
+[2026-05-01T12:00:50.637Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN obsidian-couchdb] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'obsidian-couchdb'
+  }
+]
+[2026-05-01T12:00:55.313Z] error: <httpProxy> Error calling http://backrest:9898/...
+[2026-05-01T12:00:55.314Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN backrest] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'backrest'
+  }
+]
+[2026-05-01T12:00:55.644Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/version...
+[2026-05-01T12:00:55.646Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-05-01T12:00:55.647Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/version
+[2026-05-01T12:00:55.670Z] error: <credentialedProxyHandler> HTTP Error 401 calling http://portainer:9000/api/endpoints/2/docker/containers/json?all=1
+[2026-05-01T12:01:00.317Z] error: <httpProxy> Error calling http://immich-server:2283/api/server-info/stats...
+[2026-05-01T12:01:00.319Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-05-01T12:01:00.320Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://immich-server:2283/api/server-info/stats
+[2026-05-01T12:01:00.656Z] error: <httpProxy> Error calling http://paperless:8000/...
+[2026-05-01T12:01:00.659Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN paperless] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'paperless'
+  }
+]
+[2026-05-01T12:01:05.324Z] error: <httpProxy> Error calling http://obsidian-couchdb:5984/...
+[2026-05-01T12:01:05.326Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN obsidian-couchdb] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'obsidian-couchdb'
+  }
+]
+[2026-05-01T12:01:05.662Z] error: <httpProxy> Error calling http://backrest:9898/...
+[2026-05-01T12:01:05.664Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN backrest] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'backrest'
+  }
+]
+[2026-05-01T12:01:10.333Z] error: <httpProxy> Error calling http://paperless:8000/...
+[2026-05-01T12:01:10.334Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN paperless] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'paperless'
+  }
+]
+[2026-05-01T12:01:10.666Z] error: <httpProxy> Error calling http://immich-server:2283/...
+[2026-05-01T12:01:10.668Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
+[2026-05-01T12:01:15.337Z] error: <httpProxy> Error calling http://obsidian-couchdb:5984/...
+[2026-05-01T12:01:15.339Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN obsidian-couchdb] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'obsidian-couchdb'
+  }
+]
+[2026-05-01T12:01:15.672Z] error: <httpProxy> Error calling http://backrest:9898/...
+[2026-05-01T12:01:15.674Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN backrest] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'backrest'
+  }
+]
+[2026-05-01T12:01:20.345Z] error: <httpProxy> Error calling http://paperless:8000/...
+[2026-05-01T12:01:20.347Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN paperless] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'paperless'
+  }
+]
+[2026-05-01T12:01:45.724Z] error: <httpProxy> Error calling http://immich-server:2283/...
+[2026-05-01T12:01:45.725Z] error: <httpProxy> [
+  500,
+  [Error: getaddrinfo EAI_AGAIN immich-server] {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'immich-server'
+  }
+]
