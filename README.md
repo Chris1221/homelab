@@ -4,25 +4,60 @@ This is a set of services that are deployed within my tailnet. The basic archite
 
 ```mermaid
 graph TD
+    subgraph TLS["TLS Certificate Management"]
+        AcmeSh["acme.sh (cron: daily)"]
+        Cloudflare["Cloudflare DNS"]
+        CertsDir["certs/"]
+        AcmeSh -->|DNS challenge| Cloudflare
+        AcmeSh -->|deploy hook| CertsDir
+    end
+
     subgraph Reverse Proxy
         Traefik
     end
 
+    CertsDir -->|mounted read-only| Traefik
+
     subgraph Services
         Dashy
+        Homepage
         Portainer
         Mealie
         Immich
         Samba
         Tandoor
+        Actual
+        ExpenseOwl["Expense Owl"]
+        Nextcloud
+        N8N["n8n"]
+        Paperless
+        Obsidian
+        Scrutiny
+        UptimeKuma["Uptime Kuma"]
+    end
+
+    subgraph Monitoring
+        Grafana
+        Prometheus
+        Loki
+        NodeExporter["Node Exporter"]
     end
 
     Traefik --> Dashy
+    Traefik --> Homepage
     Traefik --> Portainer
     Traefik --> Mealie
     Traefik --> Immich
-    Traefik --> Samba
     Traefik --> Tandoor
+    Traefik --> Actual
+    Traefik --> ExpenseOwl
+    Traefik --> Nextcloud
+    Traefik --> N8N
+    Traefik --> Paperless
+    Traefik --> Obsidian
+    Traefik --> Scrutiny
+    Traefik --> UptimeKuma
+    Traefik --> Grafana
 
     subgraph Secret Management
         OnePassword["1Password CLI"]
@@ -38,10 +73,12 @@ graph TD
     subgraph Infrastructure Management
         Terraform["Terraform (infra/)"]
         Restic["Restic (automated weekly backups)"]
+        Backrest
     end
 
     Terraform --> Services
     Restic --> Services
+    Backrest --> Services
 ```
 
 ### Infrastructure Management
