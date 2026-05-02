@@ -23,7 +23,7 @@ chmod +x .git/hooks/pre-commit
 The hook runs [gitleaks](https://github.com/gitleaks/gitleaks) on every `git commit` to catch accidentally staged secrets before they land in history.
 
 ```mermaid
-graph TD
+graph LR
     subgraph TLS["TLS Certificate Management"]
         AcmeSh["acme.sh (cron: daily)"]
         Cloudflare["Cloudflare DNS"]
