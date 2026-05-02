@@ -17,8 +17,8 @@ services:
       start_period: 40s
     labels:
       - "traefik.enable=true"
-      
-      - "traefik.http.routers.dashy.rule=Host(`${DOMAIN}`)"
+
+      - "traefik.http.routers.dashy.rule=Host(`dashy.${DOMAIN}`)"
       # - "traefik.http.routers.dashy.entrypoints=web"
       # - "traefik.http.services.dashy.loadbalancer.server.port=80"
 

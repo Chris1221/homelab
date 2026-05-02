@@ -19,6 +19,7 @@ include:
   - services/uptime-kuma.yml
   - services/homepage.yml
   - services/scrutiny.yml
+  - services/nextcloud.yml
 
 services:
   traefik:
