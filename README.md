@@ -2,6 +2,26 @@
 
 This is a set of services that are deployed within my tailnet. The basic architecture is as follows:
 
+## Setup (after a fresh clone)
+
+Install dependencies and pre-download the gitleaks binary used by the pre-commit hook:
+
+```bash
+pixi run setup
+```
+
+Then install the git hook (this doesn't transfer with a clone, so it must be done once manually):
+
+```bash
+cat > .git/hooks/pre-commit << 'EOF'
+#!/usr/bin/env bash
+~/.pixi/bin/pixi run pre-commit run --hook-stage commit
+EOF
+chmod +x .git/hooks/pre-commit
+```
+
+The hook runs [gitleaks](https://github.com/gitleaks/gitleaks) on every `git commit` to catch accidentally staged secrets before they land in history.
+
 ```mermaid
 graph TD
     subgraph TLS["TLS Certificate Management"]

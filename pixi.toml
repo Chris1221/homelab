@@ -1,0 +1,12 @@
+[workspace]
+authors = ["Chris Cole <chris.c.1221@gmail.com>"]
+channels = ["conda-forge"]
+name = "homelab"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+setup = "pre-commit install-hooks"
+
+[dependencies]
+pre-commit = ">=4.6.0,<5"

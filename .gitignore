@@ -19,4 +19,6 @@ certs_old/
 # monitoring/grafana/
 # monitoring/loki/
 # monitoring/uptime-kuma/
-# monitoring/scrutiny/
+# monitoring/scrutiny/# pixi environments
+.pixi/*
+!.pixi/config.toml
