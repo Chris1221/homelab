@@ -54,6 +54,7 @@ graph LR
         Obsidian
         Scrutiny
         UptimeKuma["Uptime Kuma"]
+        Collabora
     end
 
     subgraph Monitoring
@@ -78,6 +79,8 @@ graph LR
     Traefik --> Scrutiny
     Traefik --> UptimeKuma
     Traefik --> Grafana
+    Traefik --> Collabora
+    Nextcloud -.->|WOPI| Collabora
 
     subgraph Secret Management
         OnePassword["1Password CLI"]
@@ -100,6 +103,23 @@ graph LR
     Restic --> Services
     Backrest --> Services
 ```
+
+### Nextcloud Office (Collabora)
+
+The "Nextcloud Office" app (`richdocuments`) is just a client — it needs a WOPI
+backend to actually render and edit documents. `services/collabora.yml`
+deploys [Collabora Online](https://www.collaboraoffice.com/code/) for this,
+routed through Traefik at `collabora.${DOMAIN}` the same way as every other
+service. In Nextcloud, point Settings → Nextcloud Office at
+`https://collabora.${DOMAIN}`.
+
+Since `${DOMAIN}` resolves over the tailnet, Nextcloud's server-side WOPI
+calls to `collabora.${DOMAIN}` would otherwise leave the container trying to
+route to a Tailscale IP it can't reach, timing out. The `traefik` service is
+given a Docker network alias for `collabora.${DOMAIN}` on the `belvale`
+network (see `compose.yml`), so containers resolve that hostname straight to
+the Traefik container instead — still hitting the same TLS termination and
+host-based routing, just without leaving the Docker network.
 
 ### Infrastructure Management
 
