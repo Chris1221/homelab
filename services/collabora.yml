@@ -1,0 +1,24 @@
+services:
+  collabora:
+    image: collabora/code
+    container_name: collabora
+    restart: unless-stopped
+    cap_add:
+      - MKNOD
+    environment:
+      domain: nextcloud\.${DOMAIN}
+      username: ${COLLABORA_ADMIN_USER}
+      password: ${COLLABORA_ADMIN_PASSWORD}
+      extra_params: --o:ssl.enable=false --o:ssl.termination=true
+    networks:
+      - belvale
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.collabora.rule=Host(`collabora.${DOMAIN}`)"
+      - "traefik.http.routers.collabora.entrypoints=websecure"
+      - "traefik.http.routers.collabora.tls=true"
+      - "traefik.http.services.collabora.loadbalancer.server.port=9980"
+
+networks:
+  belvale:
+    external: true

@@ -20,6 +20,7 @@ include:
   - services/homepage.yml
   - services/scrutiny.yml
   - services/nextcloud.yml
+  - services/collabora.yml
 
 services:
   traefik:
