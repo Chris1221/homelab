@@ -53,6 +53,7 @@ services:
       belvale:
         aliases:
           - collabora.${DOMAIN}
+          - nextcloud.${DOMAIN}
 
 networks:
   belvale:
