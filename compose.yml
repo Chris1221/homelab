@@ -50,7 +50,9 @@ services:
       - "./certs:/certs:ro"
       - "./certs/certs.yml:/etc/traefik/certs.yml:ro"
     networks:
-      - belvale
+      belvale:
+        aliases:
+          - collabora.${DOMAIN}
 
 networks:
   belvale:
