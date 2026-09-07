@@ -20,6 +20,7 @@ services:
       - XDG_CACHE_HOME=/cache
       - TMPDIR=/tmp
       - TZ=America/Los_Angeles
+      - GOOGLE_APPLICATION_CREDENTIALS=/gcloud/backrest-sa.json  # restic SA key (managed by infra/ terraform)
     ports:
       - "9898:9898"
     restart: unless-stopped
