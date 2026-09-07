@@ -4,6 +4,7 @@ infra/.terraform
 infra/.terraform.lock.hcl
 infra/terraform.tfstate
 infra/terraform.tfstate.backup
+infra/terraform.tfstate.*.backup
 infra/terraform.tfvars
 infra/terraform.tfvars.json
 letsencrypt/
@@ -22,3 +23,10 @@ certs_old/
 # monitoring/scrutiny/# pixi environments
 .pixi/*
 !.pixi/config.toml
+
+# Claude Code local state (shared config like .claude/settings.json can be force-added)
+.claude/settings.local.json
+.claude/memory/
+
+# Homepage writes its runtime log here
+conf/homepage/logs/
