@@ -22,7 +22,7 @@ providers:
     exposedByDefault: false
 
   file:
-    filename: /etc/traefik/certs.yml
+    directory: /etc/traefik/dynamic
 
 accessLog:
   filePath: /logs/access.log

@@ -1,0 +1,14 @@
+http:
+  routers:
+    ntopng:
+      rule: "Host(`ntopng.lab.chrisbcole.me`)"
+      entryPoints:
+        - websecure
+      tls: true
+      service: ntopng
+
+  services:
+    ntopng:
+      loadBalancer:
+        servers:
+          - url: "http://host.docker.internal:3000"
