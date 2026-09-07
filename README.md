@@ -121,6 +121,24 @@ network (see `compose.yml`), so containers resolve that hostname straight to
 the Traefik container instead — still hitting the same TLS termination and
 host-based routing, just without leaving the Docker network.
 
+### Storage & file sharing
+
+Disks on the host:
+
+| Mount | Device | FS | Use |
+|---|---|---|---|
+| `/media/med_2tb` | WD 2 TB | ntfs-3g | Live service data (bind-mounted into containers) |
+| `/srv/store` | WD 8 TB | ext4 | `timemachine/` (Time Machine target) + `med_2tb_mirror/` (local mirror of `/media/med_2tb`) |
+
+Both are `systemd` mount units (`media-med_2tb.mount`, `srv-store.mount`), pinned
+by UUID, `nofail`.
+
+**Samba** runs natively on the host (`smbd`/`nmbd` + `avahi-daemon`), not in the
+compose stack — it needs host SMB/mDNS ports and Traefik has nothing to route.
+`/etc/samba/smb.conf` is stock Ubuntu plus the `[belvale_2tb]` share
+(`/media/med_2tb`, guest, rw). The **Time Machine** additions are tracked in
+`conf/samba/` — see `conf/samba/README.md` for the deploy steps.
+
 ### Infrastructure Management
 
 The infrastructure, mostly for backup, is managed by Terraform. The main file is `main.tf`, which contains the configuration for the services. The `terraform.tfvars` file contains the variables used in the configuration.
@@ -186,3 +204,18 @@ Run the `scripts/restore_env.sh` to generate a new `.env` file with accurate sec
 Run the script `scripts/update_op.sh` to back-up the `.env` to OP. This basically just splits the fields and adds them to a secure note. It doesn't retain comments.
 
 A caveat of this approach is that the names of variables defined in `.env` have to be unique with respect to the containers that are running. So if two containers need the same env var, some work arounds might be needed.
+
+#### Restic service-account key
+
+The `restic` GCS service account (created by Terraform in `infra/`) needs a JSON
+key so the `backrest` container can authenticate. That key is **not** managed by
+Terraform — a long-lived credential does not belong in Terraform state — and it
+is **not** part of `.env` either. It lives in 1Password as item `backrest-sa-key`
+in the `homelab` vault, and `services/backrest.yml` mounts it via
+`${HOME}/.config/gcloud` → `/gcloud` with
+`GOOGLE_APPLICATION_CREDENTIALS=/gcloud/backrest-sa.json`.
+
+- **Restore it** (fresh machine, before `docker compose up -d backrest`):
+  `scripts/restore_sa_key.sh`
+- **Back it up / rotate it** (after creating a new key with
+  `gcloud iam service-accounts keys create`): `scripts/push_sa_key.sh`
