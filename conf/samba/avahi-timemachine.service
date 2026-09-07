@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone='no'?>
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<!--
+  mDNS advertisement so macOS auto-discovers this host as a Time Machine
+  target (Finder sidebar + System Settings > Time Machine > Add Backup Disk).
+
+  Deploy:
+    sudo install -m 0644 conf/samba/avahi-timemachine.service \
+      /etc/avahi/services/timemachine.service
+    sudo systemctl restart avahi-daemon
+
+  The dk0 adVN= value MUST match the Samba share name ([timemachine]).
+
+  NOTE: no _device-info._tcp block here on purpose - GNOME/gvfs already
+  publishes one for this host, and a collision makes avahi drop the whole
+  file. _device-info only sets the Finder icon; discovery works without it.
+-->
+<service-group>
+  <name replace-wildcards="yes">%h</name>
+
+  <service>
+    <type>_smb._tcp</type>
+    <port>445</port>
+  </service>
+
+  <service>
+    <type>_adisk._tcp</type>
+    <port>9</port>
+    <txt-record>sys=waMa=0,adVF=0x100</txt-record>
+    <txt-record>dk0=adVN=timemachine,adVF=0x82</txt-record>
+  </service>
+</service-group>
