@@ -1,10 +1,10 @@
-# Samba — Time Machine
+# Samba — Time Machine & shares
 
 Samba runs **natively** on the host (`smbd`/`nmbd` + `avahi-daemon`), not in the
 compose stack. SMB needs host ports 137-139/445 and mDNS on 5353, and there is
 nothing for Traefik to route, so it stays on the host. This directory tracks the
-Time Machine additions; the base `/etc/samba/smb.conf` is stock Ubuntu plus the
-pre-existing `[belvale_2tb]` share.
+Time Machine and 8TB-share additions; the base `/etc/samba/smb.conf` is stock
+Ubuntu plus the pre-existing `[belvale_2tb]` share (`/media/med_2tb`, guest, rw).
 
 ## Layout
 
@@ -12,10 +12,17 @@ pre-existing `[belvale_2tb]` share.
 |---|---|
 | `timemachine.conf` | `smb.conf` fragment: global `vfs_fruit` settings + the `[timemachine]` share |
 | `avahi-timemachine.service` | mDNS `_adisk._tcp` advertisement so macOS auto-discovers the target |
+| `store_share.conf` | `smb.conf` fragment: the `[share]` share — a general-purpose guest/rw share, same style as `[belvale_2tb]`, on the 8TB drive |
 
-Backing store: `/srv/store/timemachine` — ext4 on the 8 TB drive (`srv-store.mount`).
+Backing store: `/srv/store/timemachine` and `/srv/store/share` — ext4 on the
+8 TB drive (`srv-store.mount`).
 
 ## Deploy / update
+
+`scripts/install_host_config.sh` does everything below idempotently (and also
+installs the med_2tb mirror units). It reads the `tm` password from
+`op://homelab/homelab_env/SAMBA_TM_PASS` (or `.env`, or prompts). The manual
+steps are kept here for reference:
 
 ```bash
 # 1. Dedicated Samba user (system account, no login). One-time.
@@ -32,6 +39,13 @@ sudo install -m 0644 conf/samba/timemachine.conf /etc/samba/timemachine.conf
 # 3. mDNS advertisement
 sudo install -m 0644 conf/samba/avahi-timemachine.service \
     /etc/avahi/services/timemachine.service
+
+# 3b. General-purpose 8TB share
+sudo mkdir -p /srv/store/share
+sudo chown chris:chris /srv/store/share
+sudo install -m 0644 conf/samba/store_share.conf /etc/samba/store_share.conf
+#    Add this line at the end of /etc/samba/smb.conf (once):
+#        include = /etc/samba/store_share.conf
 
 # 4. Validate and reload
 sudo testparm -s
