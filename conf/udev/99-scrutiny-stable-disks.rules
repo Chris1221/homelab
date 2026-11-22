@@ -1,0 +1,15 @@
+# Stable, colon-free symlink for the Seagate Expansion Desk 2TB drive.
+#
+# Its hardware serial is reported as "Seagate_Expansion_Desk_NA4MH7LE-0:0" -
+# the trailing ":0" makes every standard udev alias (/dev/disk/by-id/...,
+# /dev/disk/by-path/...) contain a colon, which collides with Docker's
+# "HOST:CONTAINER:PERMISSIONS" device-mapping syntax (see services/scrutiny.yml)
+# and silently truncates the path. This creates a plain symlink with no colon
+# instead, keyed off the clean ID_SERIAL_SHORT.
+#
+# Deploy: sudo install -m 0644 conf/udev/99-scrutiny-stable-disks.rules \
+#           /etc/udev/rules.d/99-scrutiny-stable-disks.rules
+#         sudo udevadm control --reload-rules
+#         sudo udevadm trigger --subsystem-match=block
+
+SUBSYSTEM=="block", KERNEL=="sd?", ENV{DEVTYPE}=="disk", ENV{ID_SERIAL_SHORT}=="NA4MH7LE", SYMLINK+="disk/by-scrutiny/seagate-2tb"
