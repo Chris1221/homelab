@@ -28,6 +28,8 @@ services:
       - "traefik.http.routers.backup-status.entrypoints=websecure"
       - "traefik.http.routers.backup-status.tls=true"
       - "traefik.http.services.backup-status.loadbalancer.server.port=8080"
+      # Two networks: tell Traefik which one it shares with this container
+      - "traefik.docker.network=belvale"
     networks:
       - belvale
       # Backrest has no networks: block, so it lives on the project default
