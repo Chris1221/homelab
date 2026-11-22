@@ -1,10 +1,8 @@
 ---
-- logo:
-    icon: https://github.com/walkxcode/dashboard-icons/raw/main/png/homelab.png
-
+# Styled as the house nameplate in custom.css
 - greeting:
     text_size: xl
-    text: Welcome to Belvale
+    text: Belvale
 
 - datetime:
     text_size: xl

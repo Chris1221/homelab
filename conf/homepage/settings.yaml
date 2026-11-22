@@ -1,20 +1,12 @@
 ---
 title: Belvale Homelab
-favicon: https://github.com/walkxcode/dashboard-icons/blob/main/png/homepage.png
+favicon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/homepage.png
 
 # Theme options: dark, light
 theme: dark
 
 # Color options: slate, gray, zinc, neutral, stone, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose, red, orange
-color: emerald
-
-# Background image (optional)
-background:
-  image: https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920
-  blur: sm
-  saturate: 50
-  brightness: 50
-  opacity: 20
+color: slate  # retinted to the Belvale palette in custom.css
 
 # Header style: clean, boxed, underlined
 headerStyle: clean

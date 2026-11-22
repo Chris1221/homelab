@@ -18,12 +18,16 @@ services:
       # Immich runs as its own compose project (immich/); join its network
       # so the widget can reach immich-server
       - immich_default
+      # Backrest has no networks: block, so it lives on the project default
+      - default
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.homepage.rule=Host(`${DOMAIN}`)"
       - "traefik.http.routers.homepage.entrypoints=websecure"
       - "traefik.http.routers.homepage.tls=true"
       - "traefik.http.services.homepage.loadbalancer.server.port=3000"
+      # Two networks (belvale + immich_default); Traefik can only reach belvale
+      - "traefik.docker.network=belvale"
 
 networks:
   immich_default:

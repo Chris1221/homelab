@@ -15,7 +15,7 @@
         icon: couchdb.png
         href: http://lab.chrisbcole.me:5984/_utils
         description: Document database for Obsidian sync
-        siteMonitor: http://obsidian-couchdb:5984
+        siteMonitor: http://obsidian-livesync:5984
 
     - Backrest:
         icon: backrest.png
@@ -47,11 +47,19 @@
                   offsite: last_success
               label: Off-site
               format: relativeDate
+            # Local status rather than its date: before the first local
+            # backup finishes the date is null, which renders as 1970.
             - field:
                 checks:
-                  local: last_success
+                  local: level
               label: Local
-              format: relativeDate
+              remap:
+                - value: ok
+                  to: Healthy
+                - value: warn
+                  to: Running
+                - value: fail
+                  to: Failing
 
 - Home:
     - Mealie:
@@ -61,7 +69,7 @@
         siteMonitor: http://mealie:9000
 
     - Actual Budget:
-        icon: actual.png
+        icon: actual-budget.png
         href: https://actual.lab.chrisbcole.me
         description: Local-first personal finance tracker
         siteMonitor: http://actual:5006
@@ -70,7 +78,7 @@
         icon: paperless.png
         href: http://paperless.lab.chrisbcole.me
         description: Document management with OCR
-        siteMonitor: http://paperless:8000
+        siteMonitor: http://webserver:8000
 
 - Admin:
     - Portainer:
@@ -100,15 +108,6 @@
         siteMonitor: http://Dashy:8080
 
 - Monitoring:
-    - Prometheus:
-        icon: prometheus.png
-        href: https://prometheus.lab.chrisbcole.me
-        description: Time-series metrics database
-        siteMonitor: http://prometheus:9090
-        widget:
-          type: prometheus
-          url: http://prometheus:9090
-
     - Uptime Kuma:
         icon: uptime-kuma.png
         href: https://uptime.lab.chrisbcole.me

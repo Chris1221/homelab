@@ -1,0 +1,209 @@
+/* Belvale — dusk palette, house-nameplate header.
+ *
+ * Homepage colors everything through --color-50 … --color-900 (RGB triplets),
+ * so retinting those keeps every built-in widget consistent. The rest targets
+ * Homepage's stable class names (service-card, site-monitor-status, …).
+ */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Young+Serif&display=swap");
+
+html[class*="theme-"] {
+  --color-50: 246 244 238;
+  --color-100: 236 233 225;
+  --color-200: 228 225 216;  /* primary text (dark) */
+  --color-300: 155 168 172;  /* secondary text (dark) */
+  --color-400: 128 141 146;
+  --color-500: 96 110 116;
+  --color-600: 70 84 90;
+  --color-700: 44 57 63;
+  --color-800: 31 41 46;     /* page */
+  --color-900: 22 30 34;
+  --color-logo-start: 232 163 61;
+  --color-logo-stop: 199 125 32;
+
+  --belvale-amber: 232 163 61;
+  --belvale-up: 108 199 154;
+  --belvale-down: 240 113 107;
+  --belvale-surface: 37 49 55;
+  --belvale-line: 55 70 77;
+}
+
+html:not(.dark)[class*="theme-"] {
+  --color-50: 31 41 46;
+  --color-800: 236 233 225;
+  --belvale-surface: 246 244 238;
+  --belvale-line: 214 210 199;
+  --belvale-amber: 176 112 18;
+  --belvale-up: 31 138 92;
+  --belvale-down: 196 58 52;
+}
+
+body,
+#page_wrapper {
+  font-family: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "tnum";
+  letter-spacing: 0.005em;
+}
+
+/* ---------- Nameplate ---------- */
+
+.information-widget-greeting span {
+  font-family: "Young Serif", Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 6vw, 4.5rem) !important;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: rgb(var(--color-200));
+  padding-bottom: 0.35rem;
+  border-bottom: 3px solid rgb(var(--belvale-amber));
+}
+
+.information-widget-datetime span {
+  font-size: 1rem !important;
+  color: rgb(var(--color-300));
+}
+
+#information-widgets {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgb(var(--belvale-line));
+}
+
+.information-widget-resource,
+.information-widget-openmeteo {
+  opacity: 0.8;
+}
+
+.information-widget-search input {
+  background: rgb(var(--belvale-surface)) !important;
+  border-color: rgb(var(--belvale-line)) !important;
+  border-radius: 10px;
+}
+
+/* The search box autofocuses on load, so keep its focus state calm. */
+.information-widget-search input:focus {
+  border-color: rgb(var(--belvale-amber) / 0.55) !important;
+  box-shadow: none !important;
+  outline: none;
+}
+
+/* ---------- Groups ---------- */
+
+.service-group-name,
+.bookmark-group-name {
+  font-family: "Young Serif", Georgia, serif;
+  font-weight: 400 !important;
+  font-size: 1.35rem !important;
+  color: rgb(var(--color-200)) !important;
+  margin-bottom: 0.15rem;
+}
+
+.services-group {
+  padding-inline: 0.5rem !important;
+}
+
+/* ---------- Service tiles ---------- */
+
+.service-card {
+  background: rgb(var(--belvale-surface)) !important;
+  border: 1px solid rgb(var(--belvale-line));
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.service-card:hover {
+  border-color: rgb(var(--belvale-amber) / 0.7);
+  background: rgb(var(--belvale-surface) / 0.8) !important;
+}
+
+.service-card a:focus-visible {
+  outline: 2px solid rgb(var(--belvale-amber));
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+.service-name {
+  font-size: 0.95rem !important;
+  font-weight: 600;
+  color: rgb(var(--color-200));
+}
+
+.service-description {
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+  color: rgb(var(--color-300)) !important;
+  line-height: 1.35;
+  margin-top: 0.1rem;
+}
+
+/* Latency pill -> indicator light. Latency stays in the hover title. */
+.service-tags {
+  top: 0.7rem !important;
+  right: 0.25rem !important;
+}
+
+.site-monitor-status {
+  background: none !important;
+  padding: 0 !important;
+}
+
+.site-monitor-status > div {
+  font-size: 0 !important;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgb(var(--belvale-up));
+  box-shadow: 0 0 0 3px rgb(var(--belvale-up) / 0.18);
+}
+
+.site-monitor-status > div[class*="rose"],
+.site-monitor-status > div[class*="red"] {
+  background: rgb(var(--belvale-down));
+  box-shadow: 0 0 0 3px rgb(var(--belvale-down) / 0.22);
+}
+
+/* ---------- Widget stats inside tiles ---------- */
+
+.service-container {
+  padding: 0 0.4rem 0.45rem;
+  gap: 0.35rem;
+}
+
+.service-block {
+  background: rgb(var(--color-900) / 0.45) !important;
+  border-radius: 9px !important;
+  margin: 0 !important;
+  padding: 0.45rem 0.3rem !important;
+}
+
+.service-block > div:first-child {
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  color: rgb(var(--color-200));
+}
+
+.service-block > div:last-child {
+  text-transform: none !important;
+  font-weight: 400 !important;
+  font-size: 0.72rem !important;
+  color: rgb(var(--color-300));
+}
+
+/* ---------- Bookmarks: quieter than services ---------- */
+
+#bookmarks {
+  opacity: 0.85;
+}
+
+.bookmark a > div,
+.bookmark-icon {
+  background: rgb(var(--belvale-surface)) !important;
+}
+
+.bookmark:hover .bookmark-text {
+  color: rgb(var(--belvale-amber));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card {
+    transition: none;
+  }
+}
