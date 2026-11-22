@@ -1,6 +1,6 @@
 # ----------------------------------------
-# Backup status dashboard: one page showing whether restic (via Backrest),
-# the med_2tb -> /srv/store mirror, and the Backrest container are healthy.
+# Backup status dashboard: one page showing whether the off-site and local restic
+# backups (both via Backrest) and the Backrest container are healthy.
 #
 # Image is built from ~/repos/backup-status:
 #   docker build -t backup-status:0.1.0 ~/repos/backup-status
@@ -17,10 +17,9 @@ services:
       BACKREST_USER: ${BACKREST_USERNAME}
       BACKREST_PASSWORD: ${BACKREST_USERNAME_PASSWORD}
     volumes:
-      # Read-only: drive usage, the mirror's success stamp, systemd timer stamps
+      # Read-only: drive usage
       - /media/med_2tb:/data/source:ro
       - /srv/store:/data/store:ro
-      - /var/lib/systemd/timers:/data/timers:ro
       # Container state for Backrest (the app only issues GET requests)
       - /var/run/docker.sock:/var/run/docker.sock:ro
     labels:

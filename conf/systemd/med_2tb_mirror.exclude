@@ -1,6 +1,0 @@
-# rsync exclude list for the med_2tb -> /srv/store/med_2tb_mirror mirror.
-# Paths are relative to /media/med_2tb.
-System Volume Information/
-$RECYCLE.BIN/
-.Trash-1000/
-lost+found/

@@ -128,7 +128,7 @@ Disks on the host:
 | Mount | Device | FS | Use |
 |---|---|---|---|
 | `/media/med_2tb` | WD 2 TB | ntfs-3g | Live service data (bind-mounted into containers) |
-| `/srv/store` | WD 8 TB | ext4 | `timemachine/` (Time Machine target) + `med_2tb_mirror/` (local mirror of `/media/med_2tb`) |
+| `/srv/store` | WD 8 TB | ext4 | `timemachine/` (Time Machine target) + `restic/` (local Backrest/restic repo for `/media/med_2tb`, daily, no password) |
 
 Both are `systemd` mount units (`media-med_2tb.mount`, `srv-store.mount`), pinned
 by UUID, `nofail`.

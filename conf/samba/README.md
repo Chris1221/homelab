@@ -19,8 +19,7 @@ Backing store: `/srv/store/timemachine` and `/srv/store/share` — ext4 on the
 
 ## Deploy / update
 
-`scripts/install_host_config.sh` does everything below idempotently (and also
-installs the med_2tb mirror units). It reads the `tm` password from
+`scripts/install_host_config.sh` does everything below idempotently. It reads the `tm` password from
 `op://homelab/homelab_env/SAMBA_TM_PASS` (or `.env`, or prompts). The manual
 steps are kept here for reference:
 

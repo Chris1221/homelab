@@ -13,6 +13,7 @@ services:
       - ./backrest/tmp:/tmp
       - ${HOME}/.config/gcloud:/gcloud  # Mount gcloud credentials
       - /media/med_2tb:/userdata  # Mount local paths to backup
+      - /srv/store/restic:/repos/local  # Local restic repo on the 8TB drive
       # - /path/to/local/repos:/repos     # Mount local repos (optional for remote storage)
     environment:
       - BACKREST_DATA=/data

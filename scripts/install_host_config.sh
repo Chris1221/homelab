@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 # Install the host-side config that lives outside the compose stack:
 #   - Samba Time Machine share + general-purpose 8TB share  (conf/samba/)
-#   - med_2tb -> /srv/store mirror timer  (conf/systemd/)
 #
 # Idempotent: safe to re-run. Run as your normal user (not root) so the
 # 1Password CLI works; privileged steps use sudo.
 #
-# Assumes disks are already mounted and base packages (samba, rsync,
+# Assumes disks are already mounted and base packages (samba,
 # avahi-daemon) are installed.
 set -euo pipefail
 
@@ -19,7 +18,7 @@ skip() { printf '    \033[2m(skip) %s\033[0m\n' "$*"; }
 die()  { printf '\033[1;31mERROR:\033[0m %s\n' "$*" >&2; exit 1; }
 
 [[ $EUID -ne 0 ]] || die "run as your normal user, not root (needed for 'op')"
-for c in sudo install rsync smbpasswd pdbedit testparm mountpoint systemctl; do
+for c in sudo install smbpasswd pdbedit testparm mountpoint systemctl; do
   command -v "$c" >/dev/null || die "missing command: $c"
 done
 mountpoint -q /srv/store     || die "/srv/store is not mounted"
@@ -105,14 +104,6 @@ sudo ufw allow from "$LAN" to any port 445 proto tcp  comment 'SMB LAN'  >/dev/n
 sudo ufw allow from "$LAN" to any port 5353 proto udp comment 'mDNS LAN' >/dev/null
 
 # ---------------------------------------------------------------------------
-say "systemd: med_2tb mirror units"
-sudo install -m 0644 "$REPO/conf/systemd/med_2tb_mirror.exclude" /etc/med_2tb_mirror.exclude
-sudo install -m 0644 "$REPO/conf/systemd/med_2tb_mirror.service" /etc/systemd/system/med_2tb_mirror.service
-sudo install -m 0644 "$REPO/conf/systemd/med_2tb_mirror.timer"   /etc/systemd/system/med_2tb_mirror.timer
-sudo systemctl daemon-reload
-sudo systemctl enable --now med_2tb_mirror.timer >/dev/null
-
-# ---------------------------------------------------------------------------
 say "Validating and reloading"
 sudo testparm -s >/dev/null
 sudo systemctl reload smbd
@@ -121,8 +112,6 @@ sudo systemctl restart avahi-daemon
 cat <<EOF
 
 Done. Next steps (not automated):
-  - initial full mirror:   sudo systemctl start med_2tb_mirror.service
-                           journalctl -u med_2tb_mirror.service -f
   - verify TM discovery:   avahi-browse -rt _adisk._tcp
   - on the Mac:            add smb://<host>/timemachine as a backup disk (user: tm)
 EOF
