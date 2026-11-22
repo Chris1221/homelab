@@ -1,0 +1,35 @@
+# ----------------------------------------
+# Backup status dashboard: one page showing whether restic (via Backrest),
+# the med_2tb -> /srv/store mirror, and the Backrest container are healthy.
+#
+# Image is built from ~/repos/backup-status:
+#   docker build -t backup-status:0.1.0 ~/repos/backup-status
+# ----------------------------------------
+services:
+  backup-status:
+    image: backup-status:0.1.0
+    pull_policy: never
+    container_name: backup-status
+    restart: unless-stopped
+    environment:
+      TZ: America/Toronto
+      BACKREST_URL: http://backrest:9898
+      BACKREST_USER: ${BACKREST_USERNAME}
+      BACKREST_PASSWORD: ${BACKREST_USERNAME_PASSWORD}
+    volumes:
+      # Read-only: drive usage, the mirror's success stamp, systemd timer stamps
+      - /media/med_2tb:/data/source:ro
+      - /srv/store:/data/store:ro
+      - /var/lib/systemd/timers:/data/timers:ro
+      # Container state for Backrest (the app only issues GET requests)
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backup-status.rule=Host(`backups.${DOMAIN}`)"
+      - "traefik.http.routers.backup-status.entrypoints=websecure"
+      - "traefik.http.routers.backup-status.tls=true"
+      - "traefik.http.services.backup-status.loadbalancer.server.port=8080"
+    networks:
+      - belvale
+      # Backrest has no networks: block, so it lives on the project default
+      - default

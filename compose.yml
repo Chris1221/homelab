@@ -25,7 +25,7 @@ include:
   - services/syncthing.yml
   # Too heavy for the current CPU without a Coral; start manually if needed
   # - services/frigate.yml
-  - services/syncthing.yml
+  - services/backup-status.yml
 
 services:
   traefik:
