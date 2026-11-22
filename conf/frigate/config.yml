@@ -1,0 +1,106 @@
+# Frigate config — https://docs.frigate.video/configuration/reference
+#
+# Cameras are Reolinks (OUI ec:71:db). Reserve their IPs in the router's
+# DHCP so these addresses don't drift.
+#
+# Each camera has two streams, re-served locally by go2rtc:
+#   <cam>      main stream -> recording + live view
+#   <cam>_sub  substream   -> object detection (cheap to decode)
+# Reolink's HTTP-FLV endpoint is more reliable than its RTSP; it requires
+# RTMP + HTTP to be enabled on the camera (Settings > Network > Advanced >
+# Server Settings). 4K/H.265 models (cam_73) use RTSP for the main stream.
+
+mqtt:
+  enabled: false
+
+# Traefik terminates TLS; it talks plain HTTP to port 8971.
+tls:
+  enabled: false
+
+auth:
+  enabled: true
+
+database:
+  path: /config/frigate.db
+
+# No Coral and no AVX2 on this CPU, and the Ivy Bridge iGPU is too old
+# for OpenVINO, so detection runs on the CPU. Fine for a couple of
+# cameras at 5 fps; a USB Coral is the upgrade path.
+detectors:
+  cpu:
+    type: cpu
+    num_threads: 3
+
+ffmpeg:
+  hwaccel_args: preset-vaapi
+
+go2rtc:
+  streams:
+    # RLC-810A: 4K H.265 main stream, which HTTP-FLV can't carry -> RTSP
+    cam_73:
+      - "rtsp://{FRIGATE_REOLINK_USER}:{FRIGATE_REOLINK_PASSWORD}@192.168.2.73:554/h265Preview_01_main"
+      - "ffmpeg:cam_73#audio=opus"
+    cam_73_sub:
+      - "ffmpeg:http://192.168.2.73/flv?port=1935&app=bcs&stream=channel0_ext.bcs&user={FRIGATE_REOLINK_USER}&password={FRIGATE_REOLINK_PASSWORD}"
+    # RLC-510A: 5MP H.264, works over HTTP-FLV
+    cam_132:
+      - "ffmpeg:http://192.168.2.132/flv?port=1935&app=bcs&stream=channel0_main.bcs&user={FRIGATE_REOLINK_USER}&password={FRIGATE_REOLINK_PASSWORD}#video=copy#audio=copy#audio=opus"
+    cam_132_sub:
+      - "ffmpeg:http://192.168.2.132/flv?port=1935&app=bcs&stream=channel0_ext.bcs&user={FRIGATE_REOLINK_USER}&password={FRIGATE_REOLINK_PASSWORD}"
+
+objects:
+  track: [person, car, dog, cat]
+
+# Kept low to spare the old CPU; detection only runs on frames with
+# motion, so masks cut load further.
+detect:
+  enabled: true
+  fps: 2
+
+record:
+  enabled: true
+  # ~2 cams of main stream is roughly 80-100 GB/day; /srv/store has room.
+  continuous:
+    days: 7
+  alerts:
+    retain:
+      days: 30
+  detections:
+    retain:
+      days: 14
+
+snapshots:
+  enabled: true
+  retain:
+    default: 30
+
+cameras:
+  cam_73:
+    ffmpeg:
+      inputs:
+        - path: rtsp://127.0.0.1:8554/cam_73
+          input_args: preset-rtsp-restream
+          roles: [record]
+        - path: rtsp://127.0.0.1:8554/cam_73_sub
+          input_args: preset-rtsp-restream
+          roles: [detect]
+    live:
+      streams:
+        Main: cam_73
+        Sub: cam_73_sub
+
+  cam_132:
+    ffmpeg:
+      inputs:
+        - path: rtsp://127.0.0.1:8554/cam_132
+          input_args: preset-rtsp-restream
+          roles: [record]
+        - path: rtsp://127.0.0.1:8554/cam_132_sub
+          input_args: preset-rtsp-restream
+          roles: [detect]
+    live:
+      streams:
+        Main: cam_132
+        Sub: cam_132_sub
+
+version: 0.18-0

@@ -1,0 +1,45 @@
+# ----------------------------------------
+# Frigate NVR: live view, recording, and object detection
+# for the Reolink cameras on the LAN.
+#
+# Camera config lives in conf/frigate/config.yml. Credentials
+# come from FRIGATE_REOLINK_USER / FRIGATE_REOLINK_PASSWORD in .env
+# (Frigate substitutes any FRIGATE_* env var into the config).
+# ----------------------------------------
+services:
+  frigate:
+    image: ghcr.io/blakeblackshear/frigate:0.18.2
+    container_name: frigate
+    restart: unless-stopped
+    stop_grace_period: 30s
+    # Shared memory for decoded frames; ~30MB per 720p detect stream.
+    shm_size: "256mb"
+    devices:
+      # Intel iGPU for VAAPI decode (Ivy Bridge -> i965 driver)
+      - /dev/dri/renderD128:/dev/dri/renderD128
+    environment:
+      TZ: America/Toronto
+      LIBVA_DRIVER_NAME: i965
+      FRIGATE_REOLINK_USER: ${FRIGATE_REOLINK_USER}
+      FRIGATE_REOLINK_PASSWORD: ${FRIGATE_REOLINK_PASSWORD}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      # Writable dir for the SQLite db and model cache; the tracked
+      # config file is layered on top of it.
+      - /srv/store/frigate/config:/config
+      - ../conf/frigate/config.yml:/config/config.yml
+      # Recordings, clips, and snapshots
+      - /srv/store/frigate/media:/media/frigate
+      - type: tmpfs
+        target: /tmp/cache
+        tmpfs:
+          size: 1000000000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frigate.rule=Host(`frigate.${DOMAIN}`)"
+      - "traefik.http.routers.frigate.entrypoints=websecure"
+      - "traefik.http.routers.frigate.tls=true"
+      # 8971 is the authenticated UI/API port (TLS disabled in config.yml)
+      - "traefik.http.services.frigate.loadbalancer.server.port=8971"
+    networks:
+      - belvale
