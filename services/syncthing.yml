@@ -1,0 +1,29 @@
+services:
+  syncthing:
+    image: lscr.io/linuxserver/syncthing:latest
+    container_name: syncthing
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Toronto
+    volumes:
+      - /media/med_2tb/syncthing/config:/config
+      # General-purpose sync root. Add more folders here as needed (each is
+      # just another bind mount) and pick them from the Syncthing web UI.
+      - /media/med_2tb/syncthing/data:/data
+    ports:
+      # Sync protocol + local discovery must be published directly - Traefik
+      # only proxies the HTTP GUI below, and remote devices (off the LAN,
+      # over Tailscale, etc.) need to reach these to connect.
+      - "22000:22000/tcp"
+      - "22000:22000/udp"
+      - "21027:21027/udp"
+    networks:
+      - belvale
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.syncthing.rule=Host(`syncthing.${DOMAIN}`)"
+      - "traefik.http.routers.syncthing.entrypoints=websecure"
+      - "traefik.http.routers.syncthing.tls=true"
+      - "traefik.http.services.syncthing.loadbalancer.server.port=8384"
