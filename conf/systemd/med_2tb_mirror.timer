@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily mirror of /media/med_2tb to /srv/store/med_2tb_mirror
+
+[Timer]
+OnCalendar=*-*-* 03:30:00
+RandomizedDelaySec=15min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
